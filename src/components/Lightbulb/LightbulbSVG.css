@@ -1,0 +1,76 @@
+/* Non-ReactModules classes for SVG file of a bulb */
+.bulb__img {
+  width: 15vh;
+  transform: rotate(180deg);
+  margin-top: -45px;
+}
+
+.bulb__inside, .bulb__outside {
+  opacity: 0.3;
+}
+
+/* Disables animation onLoad */
+.bulb__img--off {
+    animation: none !important;
+}
+
+.bulb__img--loaded .bulb__inside,
+.bulb__img--loaded .bulb__outside,
+.bulb__img--loaded .bulb__wire {
+    animation-duration: .25s;
+    animation-fill-mode: forwards;
+}
+
+.bulb__inside {
+  fill: #fff;
+  animation-name: turnOnInside;
+}
+
+.bulb__outside {
+  fill: #ddd;
+  animation-name: turnOnOutside;
+}
+
+.bulb__wire {
+  fill: #444;
+  animation-name: turnOnWire;
+}
+
+@keyframes turnOnInside {
+    from {
+        opacity: .3;
+        fill: #fff;
+    }
+    to {
+        opacity: 1;
+        fill: #FFE671;
+    }
+}
+@keyframes turnOnOutside {
+    from {
+        fill: #ddd;
+        opacity: .3;
+    }
+    to {
+        opacity: 1;
+        fill: #FFCD00;
+    }
+}
+
+@keyframes turnOnWire {
+    from {
+        fill: #444;
+    }
+    to {
+        fill: #fff;
+    }
+}
+
+ .bulb__img--off .bulb__inside, .bulb__img--off .bulb__outside, .bulb__img--off .bulb__wire {
+    animation-delay: 0s;
+    animation-direction: reverse;
+}
+
+.bulb__img--loaded .bulb__inside, .bulb__img--loaded .bulb__outside, .bulb__img--loaded .bulb__wire {
+    animation-delay: 0s;
+}
