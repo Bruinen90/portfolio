@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import styles from './App.module.css';
 import Toggler from './components/Nav/Toggler/Toggler';
 import Home from './containers/Home/Home';
+import Portfolio from './containers/Portfolio/Portfolio';
+import MemorySocks from './containers/MemorySocks/MemorySocks';
 
 class App extends Component {
     constructor(props) {
@@ -24,6 +26,8 @@ class App extends Component {
                 <Home
                     menuVisible = {this.state.showMenu}
                 />
+                <Portfolio />
+                {/* <MemorySocks /> */}
             </div>
         );
     }

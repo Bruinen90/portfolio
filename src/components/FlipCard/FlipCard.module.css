@@ -1,0 +1,35 @@
+.container {
+    perspective: 1000px;
+}
+
+.container:hover .wrapper, .containerActive {
+    transform: rotateY(180deg);
+}
+
+.container, .front, .back {
+    width: 300px;
+    height: 200px;
+}
+
+.wrapper {
+    transition: .6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front {
+    z-index: 2;
+    background-color: #ccc
+}
+
+.back {
+    background-color: #fff;
+    transform: rotateY(180deg);
+}

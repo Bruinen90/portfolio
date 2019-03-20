@@ -14,8 +14,11 @@ class Home extends Component {
     }
 
     toggleBulb = (bulbNo) => {
-        console.log(bulbNo)
         const newBulbsState = [...this.state.bulbsOff];
+        // On mobile we have only 2 bulbs so double effect
+        if(window.innerWidth < 769) {
+            newBulbsState[bulbNo+1] = !newBulbsState[bulbNo+1];
+        }
         newBulbsState[bulbNo] = !newBulbsState[bulbNo];
         this.setState({bulbsOff: newBulbsState})
     }
@@ -53,6 +56,10 @@ class Home extends Component {
                 delayInMs: 500,
             },
         ];
+
+        const fullHeightMobile = {
+            height: window.innerHeight + 'px',
+        }
         const lightBulbsOutput = lightBulbsParams.map((bulb, index) => {
             return (
                 <Lightbulb
@@ -71,6 +78,7 @@ class Home extends Component {
                     styles.container,
                     styles['bgLightness'+this.state.bulbsOff.filter((a) => !a).length]
                 ].join(' ')}
+                style={fullHeightMobile}
             >
                 <WelcomeLogo
                     bulbsOff = {this.state.bulbsOff}

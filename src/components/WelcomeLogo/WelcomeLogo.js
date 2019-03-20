@@ -11,7 +11,7 @@ const WelcomeLogo = (props) => {
                 !props.bulbsOff[i] && styles['header'+i],
                 styles['textLightness'+props.lightPower],
             ].join(' ')}
-                style={props.hideTextShadow ? {textShadow: 'none'} : {display: 'block'}}
+                style={props.hideTextShadow ? {textShadow: 'none'} : {fontFamily: 'inherit'}}
                 key={i}
             >
                 Bruinen

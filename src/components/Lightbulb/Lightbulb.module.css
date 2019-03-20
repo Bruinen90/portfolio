@@ -1,12 +1,12 @@
 .bulb {
-  width: 45vh;
-  height: 45vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: turnOnBackground 0.25s 1.05s forwards;
-  position: absolute;
-  top: 0;
+    width: 25vh;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: turnOnBackground 0.25s 1.05s forwards;
+    position: absolute;
+    top: 0;
 }
 
 .bulbOff {
@@ -15,38 +15,74 @@
 }
 
 .bulb-left {
-  left: 0;
-  top: 60vh;
+    left: -10vw;
+    top: 60vh;
 }
 
 .bulb-center-left {
-  left: 25vw;
-  top: 5vh;
+    display: none;
 }
 
 .bulb-center-right {
-  right: 25vw;
-  top: 15vh;
+    right: 0;
+    top: 20vh;
 }
 
 .bulb-right {
-  right: 0;
-  top: 40vh;
+    display: none;
 }
 
 .bulb_hanger {
-  position: absolute;
-  height: 100vh;
-  width: 4px;
-  top: -85vh;
-  left: 0;
-  right: 0;
-  margin: auto;
-  background-color: #222;
+    position: absolute;
+    height: 100vh;
+    width: 2px;
+    top: -90vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #222;
 }
 
 @keyframes turnOnBackground {
-  to {
-    background-image: radial-gradient(circle, rgba(255, 230, 113, 0.6) 2%, rgba(255, 230, 113, 0.3) 20%, rgba(255, 230, 113, 0.15) 40%, rgba(255, 230, 113, 0.025) 60%, transparent 70%);
-  }
+    to {
+        background-image: radial-gradient(
+            circle, rgba(255, 230, 113, 0.6) 2%,
+            rgba(255, 230, 113, 0.3) 20%,
+            rgba(255, 230, 113, 0.15) 40%,
+            rgba(255, 230, 113, 0.025) 60%,
+            transparent 70%);
+    }
+}
+
+@media (min-width: 768px) {
+    .bulb {
+        width: 45vh;
+        height: 45vh;
+    }
+
+    .bulb-left {
+        left: 0;
+    }
+
+    .bulb-center-left {
+        display: flex;
+        left: 25vw;
+        top: 5vh;
+    }
+
+    .bulb-center-right {
+        right: 25vw;
+        top: 15vh;
+    }
+
+    .bulb-right {
+        display: flex;
+        right: 0;
+        top: 40vh;
+    }
+
+    .bulb_hanger {
+        width: 4px;
+        top: -85vh;
+    }
 }
