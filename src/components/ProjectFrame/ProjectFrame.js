@@ -38,14 +38,19 @@ class ProjectFrame extends React.Component {
                             className={styles.screen}
                         />
                         <div className={styles.hoverCont}>
-                            <a href={this.props.url} target="_blank" rel="noopener noreferrer">
+                            <a
+                                href={this.props.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.button}
+                            >
                                 <img src={linkIcon} alt="" className={styles.icon}/>
-                                <div className={styles.link}>
+                                <div>
                                     Odwiedź stronę
                                 </div>
                             </a>
                             <div
-                                className={styles.link}
+                                className={styles.button}
                                 onClick={()=>this.setState({zoomed: true})}
                             >
                                 <img src={zoomIcon} alt="" className={styles.icon}/>

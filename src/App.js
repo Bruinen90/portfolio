@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styles from './App.module.css';
-import Toggler from './components/Nav/Toggler/Toggler';
+import Nav from './components/Nav/Nav';
 import Home from './containers/Home/Home';
 import Portfolio from './containers/Portfolio/Portfolio';
 import MemorySocks from './containers/MemorySocks/MemorySocks';
@@ -19,8 +19,8 @@ class App extends Component {
     render() {
         return (
             <div className={styles.container}>
-                <Toggler
-                    click = {()=>this.clickMenuTogglerHandler()}
+                <Nav
+                    clickToggler = {()=>this.clickMenuTogglerHandler()}
                     menuVisible = {this.state.showMenu}
                 />
                 <Home
