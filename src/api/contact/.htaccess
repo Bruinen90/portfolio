@@ -1,0 +1,4 @@
+SetEnv PHP_VER 5_3
+SetEnv REGISTER_GLOBALS 0
+Header add Access-Control-Allow-Headers "origin, x-requested-with, content-type"
+Header add Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"

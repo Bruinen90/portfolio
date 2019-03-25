@@ -3,6 +3,7 @@ import styles from './App.module.css';
 import Nav from './components/Nav/Nav';
 import Home from './containers/Home/Home';
 import Portfolio from './containers/Portfolio/Portfolio';
+import Contact from './containers/Contact/Contact';
 import MemorySocks from './containers/MemorySocks/MemorySocks';
 
 class App extends Component {
@@ -27,6 +28,7 @@ class App extends Component {
                     menuVisible = {this.state.showMenu}
                 />
                 <Portfolio />
+                <Contact />
                 {/* <MemorySocks /> */}
             </div>
         );

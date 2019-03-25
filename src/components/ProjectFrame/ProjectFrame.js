@@ -65,9 +65,11 @@ class ProjectFrame extends React.Component {
                 </div>
 
                 <FullInfo
-                    display = {this.state.zoomed ? 'block' : 'none'}
+                    visible = {this.state.zoomed}
                     clickClose = {()=>this.setState({zoomed: false})}
                     fullImgUrl = {this.props.img}
+                    title = {this.props.title}
+                    techs = {this.props.techs}
                 />
             </section>
         );

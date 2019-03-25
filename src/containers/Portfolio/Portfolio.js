@@ -13,6 +13,7 @@ const Portfolio = (props) => {
                 title = {project.name}
                 img = {project.img}
                 url = {project.url}
+                techs = {project.techs}
                 animated = {animatedPictureIndex === index}
                 key = {index}
             />
