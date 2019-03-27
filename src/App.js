@@ -29,7 +29,7 @@ class App extends Component {
                 />
                 <Portfolio />
                 <Contact />
-                {/* <MemorySocks /> */}
+                <MemorySocks />
             </div>
         );
     }

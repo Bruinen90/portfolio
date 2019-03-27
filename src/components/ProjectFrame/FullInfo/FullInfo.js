@@ -50,9 +50,9 @@ const FullInfo = (props) => {
                         </div>
                         <div className={styles.techs}>
                             <h3 className={styles.infoHeader}>Użyte technologie</h3>
-                            <p>
+                            <div className={styles.icons}>
                                 {techsOutput}
-                            </p>
+                            </div>
                         </div>
                     </div>
                 </div>

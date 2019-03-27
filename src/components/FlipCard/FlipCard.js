@@ -3,13 +3,24 @@ import styles from './FlipCard.module.css';
 
 const FlipCard = (props) => {
     return(
-        <div className={styles.container}>
+        <div
+            className={[
+                styles.container,
+                props.active && styles.containerActive,
+                props.matched && styles.containerMatched,
+                props.hard && styles.hard,
+            ].join(' ')}
+            onClick={()=>props.click(props.value)}
+        >
             <div className={styles.wrapper}>
                 <div className={styles.front}>
-                    {props.front}
+                    {/* {props.front} */}
                 </div>
                 <div className={styles.back}>
-                    {props.back}
+                    <img
+                        src={require(`../../img/socks/${props.value}.png`)}
+                        className={styles.sockImg}
+                    />
                 </div>
             </div>
         </div>

@@ -93,15 +93,6 @@ class ContactForm extends Component {
     }
 
     render() {
-        const setStyle = (inputName) => {
-            if(!this.state.inputs[inputName].validity && this.state.inputs[inputName].changed ) {
-                return {borderColor: 'red'}
-            }
-            else {
-                return {}
-            }
-        }
-
         let sendButtonValue = this.state.sent ? 'Wysłano' : 'Wyślij';
         if(this.state.error) {
             sendButtonValue = 'Błąd'
@@ -141,6 +132,7 @@ class ContactForm extends Component {
                     type={params.type}
                     placeholder={params.placeholder}
                     inputName={params.label}
+                    index = {index}
                     handleChange={(e) => this.inputChangeHandler(e, params.label)}
                     changed={this.state.inputs[params.label].changed}
                     valid={this.state.inputs[params.label].validity}

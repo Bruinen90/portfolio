@@ -2,13 +2,22 @@
     perspective: 1000px;
 }
 
-.container:hover .wrapper, .containerActive {
+.containerActive, .containerMatched {
+    pointer-events: none;
+}
+
+.containerActive .wrapper, .containerMatched .wrapper {
     transform: rotateY(180deg);
 }
 
+.containerMatched .back {
+    opacity: .2;
+}
+
 .container, .front, .back {
-    width: 300px;
-    height: 200px;
+    width: calc((100vw - 60px) / 3);
+    height: calc((100vw - 60px) / 3);
+    border-radius: 15px;
 }
 
 .wrapper {
@@ -22,14 +31,42 @@
     position: absolute;
     top: 0;
     left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .25s;
 }
 
 .front {
     z-index: 2;
-    background-color: #ccc
+    background-color: #fff;
 }
 
 .back {
     background-color: #fff;
     transform: rotateY(180deg);
+}
+
+.sockImg {
+    height: 90%;
+}
+
+.hard, .hard .front, .hard .back {
+    width: calc((100vw - 50px) / 5);
+    height: calc((100vw - 50px) / 5);
+    border-radius: 15px;
+}
+
+
+
+@media(min-width: 768px) {
+    .container, .front, .back {
+        width: 200px;
+        height: 200px;
+        border-radius: 30px;
+    }
+
+    .sockImg {
+        height: auto;
+    }
 }

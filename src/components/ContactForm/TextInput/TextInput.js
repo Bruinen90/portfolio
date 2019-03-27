@@ -9,21 +9,16 @@ class TextInput extends Component {
         }
         this.inputsArr = [];
         this.scrollToElement = (index, value) => {
-            if(window.innerWidth < 769 && !this.state.showTopics) {
-                window.scrollTo({top: this.inputsArr[index].offsetTop + 50, behavior: 'smooth'})
+            if(window.innerWidth < 769) {
+                window.scrollTo({
+                    top: this.inputsArr[index].getBoundingClientRect().top
+                         + window.scrollY,
+                    behavior: 'smooth'})
             }
-            if(index === 'topic') {
-                this.setState({showTopics: true})
-            }
-        }
-
-        this.changeTopic = (e) => {
-            this.props.handleChange(e, 'topic');
-            if(e.target.value) {
-                this.setState({showTopics: false})
-            }
+            console.log(this.inputsArr[index].getBoundingClientRect().top + window.scrollY)
         }
     }
+
     render() {
         const setStyle = () => {
             if(!this.props.valid && this.props.changed ) {

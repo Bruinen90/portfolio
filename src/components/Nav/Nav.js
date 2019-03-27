@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styles from './Nav.module.css';
 import Toggler from './Toggler/Toggler';
 import Cover from '../Cover/Cover';
