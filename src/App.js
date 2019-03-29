@@ -5,6 +5,7 @@ import Home from './containers/Home/Home';
 import Portfolio from './containers/Portfolio/Portfolio';
 import Contact from './containers/Contact/Contact';
 import MemorySocks from './containers/MemorySocks/MemorySocks';
+import About from './containers/About/About';
 
 class App extends Component {
     constructor(props) {
@@ -27,9 +28,9 @@ class App extends Component {
                 <Home
                     menuVisible = {this.state.showMenu}
                 />
+                <About />
                 <Portfolio />
                 <Contact />
-                <MemorySocks />
             </div>
         );
     }

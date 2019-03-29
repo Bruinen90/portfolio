@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import styles from './MemorySocks.module.css';
 import FlipCard from '../../components/FlipCard/FlipCard';
 import socksOnDryer from '../../img/socksOnDryer.png';
+import helpIcon from '../../img/socks/help.svg';
+import restartIcon from '../../img/socks/restart.svg';
+import restartIconWhite from '../../img/socks/restart_white.svg';
+import Lightbox from '../../components/Lightbox/Lightbox';
 
 class MemorySocks extends Component {
     constructor(props) {
@@ -18,6 +22,7 @@ class MemorySocks extends Component {
             startTime: 0,
             showWelcomeCont: true,
             level: false,
+            stars: 0,
         }
     }
 
@@ -71,7 +76,13 @@ class MemorySocks extends Component {
     componentDidUpdate(prevProps, prevState, snapshot) {
         if(prevState.activeCardIndex !== this.state.activeCardIndex) {
             if(this.state.matchedCardIndex.length === this.state.socksCount*2) {
-                this.setState({gameResult: 'win'})
+                let levelConst;
+                this.state.level === 'hard' ? levelConst = 20 : levelConst = 10;
+                const stars = 3 - Math.floor(this.state.attempts / levelConst)
+                this.setState({
+                    gameResult: 'win',
+                    stars: stars,
+                })
             }
             const checkCards = (indexA, indexB) => {
                 const matchedCardIndex = [...this.state.matchedCardIndex];
@@ -97,6 +108,22 @@ class MemorySocks extends Component {
         }
     }
 
+    restartGame = () => {
+        this.setState({
+            cards: [],
+            activeCardIndex: [],
+            matchedCardIndex: [],
+            blocked: false,
+            gameResult: false,
+            socksCount: 4,
+            attempts: 0,
+            gameStarted: false,
+            startTime: 0,
+            showWelcomeCont: true,
+            level: false,
+        })
+    }
+
     render() {
         const cardsOutput = this.state.cards.map((card, index) => {
             return(
@@ -120,60 +147,147 @@ class MemorySocks extends Component {
             }
             return(colour);
         }
-        const logoText = 'Crazy socks'.split('').map((letter, index)=> {
-            return(
-                <span style={{color: randomColor()}} key={index}>{letter}</span>
-            )
-        })
+
+        const crazyText = (textInput) => {
+            const output = textInput.split('').map((letter, index)=> {
+                return(
+                    <span style={{color: randomColor()}} key={index}>{letter}</span>
+                )
+            })
+            return(output);
+        }
+
+        const generateStars = (count) => {
+            const output = ['', '', ''];
+            console.log(output)
+            return(output.map((star, index)=>{
+                return(
+                    <img
+                        src={require(`../../img/socks/star.svg`)}
+                        className={[
+                            styles.star,
+                            count <= index && styles.emptyStar
+                        ].join(' ')}
+                        key={index}
+                    />
+                )
+            }))
+        }
+
         //
 
         let currTime = new Date();
         currTime = currTime.getTime();
         return (
-            <div className={styles.container}>
-                <div className={[
-                    styles.welcomeCont,
-                    !this.state.showWelcomeCont && styles.hideWelcomeCont
-                ].join(' ')}>
-                    <h2 className={styles.title}>
-                        {logoText}
-                    </h2>
-                    <img
-                        src={socksOnDryer}
-                        alt="Socks on dryer"
-                        className={styles.socksOnDryer}
-                    />
-                    <div className={styles.levelCont}>
-                        <div
-                            className={[
-                                styles.levelButton,
-                                styles.easyButton
+            <Lightbox
+                visible={this.props.show}
+                clickClose={this.props.hide}
+                title='Crazy socks'
+            >
+                <div className={styles.container}>
+
+                    <div className={[
+                        styles.welcomeCont,
+                        !this.state.showWelcomeCont && styles.hideWelcomeCont
+                    ].join(' ')}>
+                        <h2 className={styles.title}>
+                            {crazyText('Crazy socks')}
+                        </h2>
+                        <img
+                            src={socksOnDryer}
+                            alt="Socks on dryer"
+                            className={styles.socksOnDryer}
+                        />
+                        <div className={styles.levelCont}>
+                            <div
+                                className={[
+                                    styles.levelButton,
+                                    styles.easyButton
+                                ].join(' ')}
+                                onClick={()=>this.setLevel('easy')}
+                            >
+                                Łatwy
+                            </div>
+                            <div
+                                className={[
+                                    styles.levelButton,
+                                    styles.hardButton
+                                ].join(' ')}
+                                onClick={()=>this.setLevel('hard')}
+                            >
+                                Trudny
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={styles.game}>
+                        <div className={styles.gameControls}>
+                            <img
+                                src={helpIcon}
+                                alt="Pomoc"
+                                className={[
+                                    styles.controlButton,
+                                    styles.controlIcon
+                                ].join(' ')}
+                                onClick={()=>this.setState({showHelp: true})}
+                            />
+                            <img
+                                src={restartIcon}
+                                alt="Zacznij od nowa"
+                                className={[
+                                    styles.controlButton,
+                                    styles.controlIcon
+                                ].join(' ')}
+                                onClick={()=>this.restartGame()}
+                            />
+                            <div className={[
+                                styles.attemptsCont,
+                                styles.controlButton
+                            ].join(' ')}>
+                                Próby:
+                                <span className={styles.attempts}>
+                                    {this.state.attempts}
+                                </span>
+                            </div>
+                        </div>
+                        <div className={[
+                            styles.gameGrid,
+                            this.state.level==='hard' && styles.hard
                             ].join(' ')}
-                            onClick={()=>this.setLevel('easy')}
                         >
-                            Easy
+                            {cardsOutput}
+                        </div>
+                        {/* {(currTime - this.state.startTime) / 1000} sekund */}
+                    </div>
+
+                    <div className={[
+                        styles.youWonCont,
+                        this.state.gameResult==='win' && styles.showYouWonCont,
+                    ].join(' ')}>
+                        <h2 className={styles.title}>
+                            {crazyText('Wygrana, gratulacje!')}
+                        </h2>
+                        <div className={styles.score}>Potrzebowałeś {this.state.attempts} prób</div>
+                        <div className={styles.starsCont}>
+                            {generateStars(this.state.stars)}
                         </div>
                         <div
                             className={[
-                                styles.levelButton,
-                                styles.hardButton
+                                styles.controlButton,
+                                styles.resetWhenDone
                             ].join(' ')}
-                            onClick={()=>this.setLevel('hard')}
+                            onClick={()=>this.restartGame()}
                         >
-                            Hard
+                            <img
+                                src={restartIconWhite}
+                                alt="Zacznij od nowa"
+                                className={styles.controlIcon}
+                            />
+                            Jeszcze raz?
                         </div>
                     </div>
                 </div>
-                <div className={[
-                    styles.game,
-                    this.state.level==='hard' && styles.hard
-                ].join(' ')}>
-                    {cardsOutput}
-                    {this.state.attempts}<br />
-                    {/* {(currTime - this.state.startTime) / 1000} sekund */}
-                </div>
-            </div>
-
+            </Lightbox>
         );
     }
 }

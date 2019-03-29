@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 45px 30px;
+    padding-bottom: 0;
+    background-color: var(--color-brown);
+    color: var(--color-light);
+}
+
+.imagesCont {
+    text-align: right;
+}
+
+.laundry {
+    width: 50%;
+    margin-bottom: -5px;
+}
+
+.laundryMachine {
+    margin-top: 20px;
+    width: 50%;
+    align-self: flex-end;
+    margin-right: -30px;
+    animation: pulse 2s infinite alternate;
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    to {
+        filter: brightness(1.2);
+    }
+}
