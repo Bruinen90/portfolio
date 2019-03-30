@@ -12,25 +12,46 @@ class App extends Component {
         super(props);
         this.state = {
             showMenu: false,
-        }
+        };
+        this.sectionsRefs = {
+            home: React.createRef(),
+            about: React.createRef(),
+            portfolio: React.createRef(),
+            contact: React.createRef(),
+        };
     }
 
     clickMenuTogglerHandler = () => {
         this.setState({showMenu: !this.state.showMenu})
     }
+
+    goToSection = (sectionName) => {
+        this.sectionsRefs[sectionName].current.scrollIntoView({behavior: 'smooth'});
+        this.setState({showMenu: false})
+    }
+
     render() {
         return (
             <div className={styles.container}>
                 <Nav
                     clickToggler = {()=>this.clickMenuTogglerHandler()}
                     menuVisible = {this.state.showMenu}
+                    clickLink = {(link)=>this.goToSection(link)}
                 />
-                <Home
-                    menuVisible = {this.state.showMenu}
-                />
-                <About />
-                <Portfolio />
-                <Contact />
+                <section ref={this.sectionsRefs.home}>
+                    <Home
+                        menuVisible = {this.state.showMenu}
+                    />
+                </section>
+                <section ref={this.sectionsRefs.about}>
+                    <About />
+                </section>
+                <section ref={this.sectionsRefs.portfolio}>
+                    <Portfolio />
+                </section>
+                <section ref={this.sectionsRefs.contact}>
+                    <Contact />
+                </section>
             </div>
         );
     }

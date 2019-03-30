@@ -159,7 +159,6 @@ class MemorySocks extends Component {
 
         const generateStars = (count) => {
             const output = ['', '', ''];
-            console.log(output)
             return(output.map((star, index)=>{
                 return(
                     <img

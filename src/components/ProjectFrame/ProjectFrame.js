@@ -26,8 +26,14 @@ class ProjectFrame extends React.Component {
     }
     render() {
         return(
-            <section className={styles.container}>
-                <div className={styles.picture} ref={this.frameRef}>
+            <section
+                className={[
+                    styles.container,
+                    this.props.justImage && styles.containerJustImage,
+                ].join(' ')}
+            >
+                <div
+                    className={styles.picture} ref={this.frameRef}>
                     <div className={styles.mount}></div>
                     <div className={styles.rope}></div>
                     <div className={styles.frame}
@@ -37,40 +43,45 @@ class ProjectFrame extends React.Component {
                             alt={this.props.title}
                             className={styles.screen}
                         />
-                        <div className={styles.hoverCont}>
-                            <a
-                                href={this.props.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className={styles.button}
-                            >
-                                <img src={linkIcon} alt="" className={styles.icon}/>
-                                <div>
-                                    Odwiedź stronę
+                        {!this.props.justImage &&
+                            <div className={styles.hoverCont}>
+                                <a
+                                    href={this.props.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={styles.button}
+                                >
+                                    <img src={linkIcon} alt="" className={styles.icon}/>
+                                    <div>
+                                        Odwiedź stronę
+                                    </div>
+                                </a>
+                                <div
+                                    className={styles.button}
+                                    onClick={()=>this.setState({zoomed: true})}
+                                >
+                                    <img src={zoomIcon} alt="" className={styles.icon}/>
+                                    <div>Zobacz szczegóły</div>
                                 </div>
-                            </a>
-                            <div
-                                className={styles.button}
-                                onClick={()=>this.setState({zoomed: true})}
-                            >
-                                <img src={zoomIcon} alt="" className={styles.icon}/>
-                                <div>Zobacz szczegóły</div>
                             </div>
-
-                        </div>
+                        }
                     </div>
                 </div>
-                <div className={styles.label}>
-                    {this.props.title}
-                </div>
+                {!this.props.justImage &&
+                    <React.Fragment>
+                        <div className={styles.label}>
+                            {this.props.title}
+                        </div>
 
-                <FullInfo
-                    visible = {this.state.zoomed}
-                    clickClose = {()=>this.setState({zoomed: false})}
-                    fullImgUrl = {this.props.img}
-                    title = {this.props.title}
-                    techs = {this.props.techs}
-                />
+                        <FullInfo
+                            visible = {this.state.zoomed}
+                            clickClose = {()=>this.setState({zoomed: false})}
+                            fullImgUrl = {this.props.img}
+                            title = {this.props.title}
+                            techs = {this.props.techs}
+                        />
+                    </React.Fragment>
+                }
             </section>
         );
     }

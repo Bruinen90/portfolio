@@ -3,12 +3,18 @@
     src: url('./fonts/DKInnuendo.otf');
 }
 
+@font-face {
+    font-family: 'PeaceSans';
+    src: url('./fonts/peace_sans.otf');
+}
+
 :root {
     --desktop-break-point: 768px;
     --color-light: #F1ECE5;
     --color-brown: #A0804D;
     --color-dark: #254651;
     --color-pink: #EE7B69;
+    --font-headers: 'PeaceSans';
 }
 
 body {
@@ -17,7 +23,7 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(#444, #777) no-repeat;
+  background: linear-gradient(var(--color-dark), var(--color-light)) no-repeat;
   background-size: cover;
   min-height: 100vh;
 }
@@ -25,4 +31,9 @@ body {
 * {
     outline: none;
     box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--font-headers);
+    font-weight: 300;
 }

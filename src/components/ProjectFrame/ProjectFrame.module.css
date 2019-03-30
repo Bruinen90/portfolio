@@ -6,6 +6,17 @@
     min-height: 400px;
 }
 
+.containerJustImage {
+    width: 40%;
+    justify-content: flex-start;
+    margin: auto;
+}
+
+.containerJustImage .rope, .containerJustImage .rope::after {
+    background-color: var(--color-light);
+    margin-bottom: -20%;
+}
+
 .picture {
     width: 100%;
     display: flex;
