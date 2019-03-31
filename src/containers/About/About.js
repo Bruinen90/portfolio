@@ -34,14 +34,14 @@ class About extends Component {
                             </div>
                         </div>
                         <div className={styles.imagesCont}>
-                            <div className={styles.frameCont}>
+                            {/* <div className={styles.frameCont}>
                                 <ProjectFrame
                                     title = 'Crazy socks'
                                     img = 'crazy_socks.png'
                                     animated = {true}
                                     justImage = {true}
                                 />
-                            </div>
+                            </div> */}
                             <img
                                 src={laundryMachine}
                                 alt="Rozpocznij grę"

@@ -2,6 +2,7 @@ const projectsList = [
     {
         name: 'escala',
         img: 'escala.png',
+        themeColour: '#444',
         url: 'https://escalapoland.com/',
         type: 'zlecenie komercyjne',
         techs: ['react', 'react router', 'css modules'],
@@ -9,6 +10,8 @@ const projectsList = [
     {
         name: 'domino',
         img: 'domino.png',
+        // themeColour: 'linear-gradient(to right, #41eeee, #00b3f3)',
+        themeColour: '#41eeee',
         url: 'https://domino-9aeb5.firebaseapp.com/',
         type: 'zlecenie komercyjne',
         techs: ['react', 'react router', 'css modules'],
@@ -16,6 +19,7 @@ const projectsList = [
     {
         name: 'osiedlova',
         img: 'osiedlova.png',
+        themeColour: '#769625',
         url: 'http://www.osiedlova.com/',
         type: 'zlecenie komercyjne',
         techs: ['html5', 'css3', 'bem', 'sass', 'js'],
@@ -23,6 +27,7 @@ const projectsList = [
     {
         name: 'estilo',
         img: 'estilo.png',
+        themeColour: '#8e8097',
         url: 'https://bruinen90.github.io/estilo/',
         type: 'projekt oczekujący na akceptację',
         techs: ['html5', 'css3', 'bem', 'sass', 'js'],
@@ -30,6 +35,7 @@ const projectsList = [
     {
         name: 'wolove burgers',
         img: 'wolove.png',
+        themeColour: '#653a20',
         url: 'http://woloveburgers.pl/',
         type: 'zlecenie komercyjne',
         techs: ['html5', 'css3', 'sass', 'bem', 'js'],
@@ -37,6 +43,7 @@ const projectsList = [
     {
         name: 'czyżyk',
         img: 'czyzyk.png',
+        themeColour: '#fff',
         url: 'https://bruinen90.github.io/czyzyk/',
         type: 'projekt oczekujący na akceptację',
         techs: ['html5', 'css3', 'bem', 'js', 'gulp', 'sass'],
@@ -44,6 +51,7 @@ const projectsList = [
     {
         name: 'kitchen planner',
         img: 'kitchen_planner.png',
+        themeColour: '#c9675a',
         url: 'https://kitchen-planer.firebaseapp.com/',
         type: 'realizacja na cele prezentacyjne',
         techs: ['react', 'redux', 'react router'],
@@ -51,6 +59,7 @@ const projectsList = [
     {
         name: 'fylo',
         img: 'fylo.png',
+        themeColour: '#46288a',
         url: 'https://bruinen90.github.io/fylo/',
         type: 'realizacja na cele prezentacyjne',
         techs: ['html5', 'css3', 'bem', 'sass', 'js'],
@@ -58,6 +67,7 @@ const projectsList = [
     {
         name: 'fylo dark',
         img: 'fylo_dark.png',
+        themeColour: '#375266',
         url: 'https://bruinen90.github.io/fylo-dark/',
         type: 'realizacja na cele prezentacyjne',
         techs: ['html5', 'css3', 'bem', 'sass', 'js'],

@@ -15,64 +15,58 @@ class ProjectFrame extends React.Component {
         }
     }
 
-    componentDidMount() {
-        const hang = () => {
-            if(this.frameRef.current.getBoundingClientRect().top < window.innerHeight && this.props.animated) {
-                this.frameRef.current.classList.add(styles.pictureAnimated)
-            }
-        }
-        hang()
-        document.addEventListener('scroll', hang);
-    }
+    // componentDidMount() {
+    //     const hang = () => {
+    //         if(this.frameRef.current.getBoundingClientRect().top < window.innerHeight && this.props.animated) {
+    //             this.frameRef.current.classList.add(styles.pictureAnimated)
+    //         }
+    //     }
+    //     hang()
+    //     document.addEventListener('scroll', hang);
+    // }
     render() {
+        const projectImg = require(`../../img/portfolio/${this.props.img}`);
+        const projectLogo = require('../../img/portfolio/logos/escala.svg')
         return(
-            <section
-                className={[
-                    styles.container,
-                    this.props.justImage && styles.containerJustImage,
-                ].join(' ')}
-            >
-                <div
-                    className={styles.picture} ref={this.frameRef}>
-                    <div className={styles.mount}></div>
-                    <div className={styles.rope}></div>
-                    <div className={styles.frame}
+            <div className={styles.container}>
+                <div className={styles.picture} ref={this.frameRef}>
+                    <div
+                        className={styles.frame}
+                        style={{
+                            backgroundImage: "url(" + projectImg + ")"
+                        }}
                     >
-                        <img
-                            src={require(`../../img/portfolio/${this.props.img}`)}
-                            alt={this.props.title}
-                            className={styles.screen}
-                        />
-                        {!this.props.justImage &&
-                            <div className={styles.hoverCont}>
-                                <a
-                                    href={this.props.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className={styles.button}
-                                >
-                                    <img src={linkIcon} alt="" className={styles.icon}/>
-                                    <div>
-                                        Odwiedź stronę
-                                    </div>
-                                </a>
-                                <div
-                                    className={styles.button}
-                                    onClick={()=>this.setState({zoomed: true})}
-                                >
-                                    <img src={zoomIcon} alt="" className={styles.icon}/>
-                                    <div>Zobacz szczegóły</div>
-                                </div>
+                        <div
+                            className={styles.colourOverlay}
+                            style={{
+                                background: this.props.themeColour
+                            }}
+                        >
+                        </div>
+                        <div className={styles.iconsBackground}></div>
+                        <div className={styles.iconsCont}>
+                            <a
+                                href={this.props.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.icon}
+                            >
+                                <img src={linkIcon} alt="" className={styles.icon}/>
+                            </a>
+                            <div
+                                className={styles.icon}
+                                onClick={()=>this.setState({zoomed: true})}
+                            >
+                                <img src={zoomIcon} alt="" className={styles.icon}/>
                             </div>
-                        }
+                        </div>
+                        <img
+                            src={projectLogo}
+                            alt={this.props.title}
+                            className={styles.logo}
+                        />
                     </div>
                 </div>
-                {!this.props.justImage &&
-                    <React.Fragment>
-                        <div className={styles.label}>
-                            {this.props.title}
-                        </div>
-
                         <FullInfo
                             visible = {this.state.zoomed}
                             clickClose = {()=>this.setState({zoomed: false})}
@@ -80,9 +74,7 @@ class ProjectFrame extends React.Component {
                             title = {this.props.title}
                             techs = {this.props.techs}
                         />
-                    </React.Fragment>
-                }
-            </section>
+            </div>
         );
     }
 };

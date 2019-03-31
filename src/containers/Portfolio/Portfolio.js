@@ -12,9 +12,10 @@ const Portfolio = (props) => {
             <ProjectFrame
                 title = {project.name}
                 img = {project.img}
+                themeColour={project.themeColour}
                 url = {project.url}
                 techs = {project.techs}
-                animated = {animatedPictureIndex === index}
+                // animated = {animatedPictureIndex === index}
                 key = {index}
             />
         )
