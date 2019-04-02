@@ -1,17 +1,30 @@
-.container {
+.header {
+    font-size: 48px;
+    text-align: center;
+    color: var(--color-light);
+    text-shadow: 2px 3px 0px rgba(0,0,0,.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56.25vw;
+    margin: 0;
+    padding-top: 30px;
+}
+
+.grid {
     display: grid;
     grid-template: auto;
-    /* grid-gap: 45px; */
     width: 100%;
-    /* padding: 30px 15px; */
     overflow-x: hidden;
 }
 
 
 @media(min-width: 768px) {
-    .container {
+    .grid {
         grid-template: auto / 1fr 1fr 1fr;
-        /* max-width: 1920px; */
-        /* margin: auto; */
+    }
+
+    .header {
+        height: 18.75vw;
     }
 }

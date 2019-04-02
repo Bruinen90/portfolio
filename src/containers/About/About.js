@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import styles from './About.module.css';
 import TechIcon from '../../components/TechIcon/TechIcon';
-import laundryMachine from '../../img/laundry_machine.svg';
 import MemorySocks from '../MemorySocks/MemorySocks';
-import ProjectFrame from '../../components/ProjectFrame/ProjectFrame';
+import Button from '../../components/Button/Button';
+import SocialIcons from '../../components/SocialIcons/SocialIcons';
+
+import mainImg from '../../img/about_main.jpg';
+import techs from '../../data/webTechs';
 
 class About extends Component {
     constructor(props) {
@@ -13,10 +16,14 @@ class About extends Component {
         }
     }
     render() {
-        const skillsList = ['html5', 'css3', 'js', 'react', 'rwd'];
-        const skillsOutput = skillsList.map((skill, index) => {
+        const skillsOutput = techs.map((skill, index) => {
             return(
-                <TechIcon name={skill} key={index} />
+                <div className={styles.iconCont} key={index}>
+                    <TechIcon
+                        name={skill.name}
+                        fullName={skill.fullName}
+                    />
+                </div>
             )
         })
         return (
@@ -28,27 +35,40 @@ class About extends Component {
                             <div className={styles.text}>
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit alias possimus aspernatur sunt illum magni, nam minima odio voluptates aperiam, reiciendis repudiandae voluptas at aliquid quidem eum veniam. Ipsa voluptatibus accusantium laudantium dignissimos, ex libero temporibus animi sunt impedit neque similique, reiciendis cupiditate amet ipsam! Ducimus quaerat esse, sed distinctio ipsa facilis nam. Dolor, assumenda porro. Tempore assumenda error qui accusantium, in accusamus quae totam sed, veniam deleniti sapiente quam asperiores cum quod quia rerum ipsa animi eum nostrum veritatis?
                             </div>
-                            <h3 className={styles.techHeader}>Umiejętności</h3>
-                            <div className={styles.techs}>
-                                {skillsOutput}
+                            <div className={styles.buttonsCont}>
+                                <Button
+                                    justFrame={true}
+                                    click={this.props.goToPortfolio}
+                                >
+                                    Moje realizacje
+                                </Button>
+                                <Button
+                                    click={this.props.goToContact}
+                                >
+                                    Kontakt
+                                </Button>
+                                <SocialIcons />
                             </div>
                         </div>
                         <div className={styles.imagesCont}>
-                            {/* <div className={styles.frameCont}>
-                                <ProjectFrame
-                                    title = 'Crazy socks'
-                                    img = 'crazy_socks.png'
-                                    animated = {true}
-                                    justImage = {true}
-                                />
-                            </div> */}
-                            <img
+                            <div className={styles.skillsCont}>
+                                {/* <h3 className={styles.techHeader}>Umiejętności</h3> */}
+                                <div className={styles.techs}>
+                                    {skillsOutput}
+                                </div>
+                            </div>
+                            {/* <img
                                 src={laundryMachine}
                                 alt="Rozpocznij grę"
                                 className={styles.laundryMachine}
                                 onClick={()=>this.setState({
                                     showCrazySocksGame: true
                                 })}
+                            /> */}
+                            <img
+                                src={mainImg}
+                                alt="Web developer"
+                                className={styles.mainImg}
                             />
                         </div>
                     </div>

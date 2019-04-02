@@ -19,7 +19,6 @@ class MemorySocks extends Component {
             socksCount: 4,
             attempts: 0,
             gameStarted: false,
-            startTime: 0,
             showWelcomeCont: true,
             level: false,
             stars: 0,
@@ -28,13 +27,6 @@ class MemorySocks extends Component {
 
     clickHandler = (index) => {
         if(!this.state.blocked) {
-            if(!this.state.gameStarted) {
-                const startTime = new Date()
-                this.setState({
-                    gameStarted: true,
-                    startTime: startTime.getTime(),
-                })
-            }
             const prevCards = [...this.state.cards];
             prevCards[index].active = true;
             const prevActive = [...this.state.activeCardIndex];
@@ -118,7 +110,6 @@ class MemorySocks extends Component {
             socksCount: 4,
             attempts: 0,
             gameStarted: false,
-            startTime: 0,
             showWelcomeCont: true,
             level: false,
         })
@@ -168,15 +159,11 @@ class MemorySocks extends Component {
                             count <= index && styles.emptyStar
                         ].join(' ')}
                         key={index}
+                        alt=""
                     />
                 )
             }))
         }
-
-        //
-
-        let currTime = new Date();
-        currTime = currTime.getTime();
         return (
             <Lightbox
                 visible={this.props.show}
@@ -256,7 +243,6 @@ class MemorySocks extends Component {
                         >
                             {cardsOutput}
                         </div>
-                        {/* {(currTime - this.state.startTime) / 1000} sekund */}
                     </div>
 
                     <div className={[

@@ -44,7 +44,10 @@ class App extends Component {
                     />
                 </section>
                 <section ref={this.sectionsRefs.about}>
-                    <About />
+                    <About
+                        goToPortfolio={()=>this.goToSection('portfolio')}
+                        goToContact={()=>this.goToSection('contact')}
+                    />
                 </section>
                 <section ref={this.sectionsRefs.portfolio}>
                     <Portfolio />

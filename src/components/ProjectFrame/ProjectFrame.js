@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './ProjectFrame.module.css';
-import linkIcon from '../../img/icons/link.svg';
-import zoomIcon from '../../img/icons/zoom.svg';
+import visitIcon from '../../img/icons/visit.svg';
+import detailsIcon from '../../img/icons/details.svg';
 
 import FullInfo from './FullInfo/FullInfo';
 
@@ -26,7 +26,7 @@ class ProjectFrame extends React.Component {
     // }
     render() {
         const projectImg = require(`../../img/portfolio/${this.props.img}`);
-        const projectLogo = require('../../img/portfolio/logos/escala.svg')
+        const projectLogo = require('../../img/portfolio/logos/osiedlova.svg')
         return(
             <div className={styles.container}>
                 <div className={styles.picture} ref={this.frameRef}>
@@ -49,15 +49,13 @@ class ProjectFrame extends React.Component {
                                 href={this.props.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className={styles.icon}
                             >
-                                <img src={linkIcon} alt="" className={styles.icon}/>
+                                <img src={visitIcon} alt="" className={styles.icon}/>
                             </a>
                             <div
-                                className={styles.icon}
                                 onClick={()=>this.setState({zoomed: true})}
                             >
-                                <img src={zoomIcon} alt="" className={styles.icon}/>
+                                <img src={detailsIcon} alt="" className={styles.icon}/>
                             </div>
                         </div>
                         <img

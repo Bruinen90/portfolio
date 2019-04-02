@@ -3,7 +3,12 @@ import styles from './TechIcon.module.css';
 
 const TechIcon = (props) => {
     return(
-        <img src={require(`../../img/techs/${props.name.replace(' ', '_')}.svg`)} alt={props.name} className={styles.icon}/>
+        <img
+            src={require(`../../img/techs/${props.name.replace(' ', '_')}.svg`)}
+            alt={props.name}
+            title={props.fullName}
+            className={styles.icon}
+        />
     );
 };
 

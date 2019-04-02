@@ -22,7 +22,12 @@ const Portfolio = (props) => {
     })
     return(
         <div className={styles.container}>
-            {projectsOutput}
+            <h2 className={styles.header}>
+                Realizacje
+            </h2>
+            <div className={styles.grid}>
+                {projectsOutput}
+            </div>
         </div>
     );
 };

@@ -1,14 +1,10 @@
 .icon {
-    width: 45px;
-    height: 45px;
-    margin: 10px 20px;
-    margin-left: 0;
+    width: 100%;
+    display: block;
 }
 
 @media (min-width: 768px) {
     .icon {
-        width: 2.5vw;
-        height: 2.5vw;
-        margin: 10px;
+        max-width: 60px;
     }
 }

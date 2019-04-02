@@ -20,6 +20,7 @@ const FlipCard = (props) => {
                     <img
                         src={require(`../../img/socks/${props.value}.png`)}
                         className={styles.sockImg}
+                        alt={'Skarpeta' + props.value}
                     />
                 </div>
             </div>
