@@ -26,10 +26,6 @@
     cursor: pointer;
 }
 
-.menuItem {
-    margin-bottom: 1rem;
-}
-
 @media (min-width: 768px) {
     .menu {
         width: 450px;

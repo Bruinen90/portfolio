@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './Portfolio.module.css';
 import ProjectFrame from '../../components/ProjectFrame/ProjectFrame';
+import Header from '../../components/Header/Header';
+import SkewedSection from '../../components/SkewedSection/SkewedSection';
 
 import projectsList from '../../data/projects';
 
@@ -22,12 +24,31 @@ const Portfolio = (props) => {
     })
     return(
         <div className={styles.container}>
-            <h2 className={styles.header}>
-                Realizacje
-            </h2>
-            <div className={styles.grid}>
-                {projectsOutput}
-            </div>
+            <SkewedSection
+                skew={-7}
+                backgroundColor='#F1ECE5'
+            >
+                <div className={styles.headerCont}>
+                    <Header
+                        color="#254651"
+                        inheritFont={true}
+                    >
+                        Realizacje
+                    </Header>
+                </div>
+                <div className={styles.grid}>
+                    {projectsOutput}
+                </div>
+
+                <div className={styles.headerCont}>
+                    <Header
+                        color="#254651"
+                        inheritFont={true}
+                    >
+                        Realizacje
+                    </Header>
+                </div>
+            </SkewedSection>
         </div>
     );
 };

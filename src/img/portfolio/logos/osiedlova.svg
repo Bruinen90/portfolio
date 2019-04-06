@@ -50,7 +50,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -103,18 +103,47 @@
           </g>
         </g>
       </g>
-      <text
-         xml:space="preserve"
+      <g
+         aria-label="OSIEDLOVA"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Steelfish;-inkscape-font-specification:Steelfish;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         x="117.82134"
-         y="128.43446"
-         id="text834"><tspan
-           sodipodi:role="line"
-           id="tspan832"
-           x="117.82134"
-           y="128.43446"
+         id="text834">
+        <path
+           d="m 123.23154,109.46066 q 0,-1.3208 -1.1176,-1.3208 -1.143,0 -1.143,1.3208 v 15.4178 q 0,1.2954 1.143,1.2954 1.1176,0 1.1176,-1.2954 z m 2.2606,14.0208 q 0,4.953 -3.3782,4.953 -3.4036,0 -3.4036,-4.953 v -12.6238 q 0,-4.953 3.4036,-4.953 3.3782,0 3.3782,4.953 z"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.39999962px;font-family:Steelfish;-inkscape-font-specification:Steelfish;letter-spacing:2.31245804px;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
-           dx="0 0 0 0.029999999">OSIEDLOVA</tspan></text>
+           id="path855" />
+        <path
+           d="m 133.79622,109.46066 q 0,-1.3208 -0.9652,-1.3208 -0.9652,0 -0.9652,1.3208 v 3.048 q 0,1.4732 2.0828,4.2418 2.0828,2.7178 2.0828,4.7498 v 1.9812 q 0,4.953 -3.2004,4.953 -3.2258,0 -3.2258,-4.953 v -2.794 h 2.2606 v 4.191 q 0,1.2954 0.9652,1.2954 0.9652,0 0.9652,-1.2954 v -2.5908 q 0,-2.032 -2.1082,-4.7498 -2.0828,-2.6924 -2.0828,-5.2324 v -1.4478 q 0,-4.953 3.2258,-4.953 3.2004,0 3.2004,4.953 v 2.0574 h -2.2352 z"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.39999962px;font-family:Steelfish;-inkscape-font-specification:Steelfish;letter-spacing:2.31245804px;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+           id="path857" />
+        <path
+           d="m 140.15284,128.43446 v -22.5298 h 2.2606 v 22.5298 z"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.39999962px;font-family:Steelfish;-inkscape-font-specification:Steelfish;letter-spacing:2.31245804px;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+           id="path859" />
+        <path
+           d="m 148.82386,126.17386 h 3.4798 v 2.2606 h -5.7404 v -22.5298 h 5.7404 v 2.2352 h -3.4798 v 7.6708 h 1.9812 v 2.2606 h -1.9812 z"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.39999962px;font-family:Steelfish;-inkscape-font-specification:Steelfish;letter-spacing:2.31245804px;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+           id="path861" />
+        <path
+           d="m 160.59028,109.46066 q 0,-1.3208 -1.1176,-1.3208 h -1.143 v 18.034 h 1.143 q 1.1176,0 1.1176,-1.2954 z m 2.2606,14.0208 q 0,4.953 -3.3782,4.953 h -3.4036 v -22.5298 h 3.4036 q 3.3782,0 3.3782,4.953 z"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.39999962px;font-family:Steelfish;-inkscape-font-specification:Steelfish;letter-spacing:2.31245804px;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+           id="path863" />
+        <path
+           d="m 169.22456,126.17386 h 3.4798 v 2.2606 h -5.7404 v -22.5298 h 2.2606 z"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.39999962px;font-family:Steelfish;-inkscape-font-specification:Steelfish;letter-spacing:2.31245804px;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+           id="path865" />
+        <path
+           d="m 180.74293,109.46066 q 0,-1.3208 -1.1176,-1.3208 -1.143,0 -1.143,1.3208 v 15.4178 q 0,1.2954 1.143,1.2954 1.1176,0 1.1176,-1.2954 z m 2.2606,14.0208 q 0,4.953 -3.3782,4.953 -3.4036,0 -3.4036,-4.953 v -12.6238 q 0,-4.953 3.4036,-4.953 3.3782,0 3.3782,4.953 z"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.39999962px;font-family:Steelfish;-inkscape-font-specification:Steelfish;letter-spacing:2.31245804px;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+           id="path867" />
+        <path
+           d="m 194.48261,105.90466 -2.9972,22.5298 h -2.2606 l -2.9972,-22.5298 h 2.286 l 1.4986,12.1412 0.3302,3.9878 0.3302,-3.9624 1.524,-12.1666 z"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.39999962px;font-family:Steelfish;-inkscape-font-specification:Steelfish;letter-spacing:2.31245804px;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+           id="path869" />
+        <path
+           d="m 199.77242,122.64326 h 2.2352 l -0.762,-6.35 -0.3556,-3.9878 -0.3302,3.9624 z m -2.9972,5.7912 2.9972,-22.5298 h 2.2606 l 2.9972,22.5298 h -2.286 l -0.4318,-3.3782 h -2.8702 l -0.381,3.3782 z"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.39999962px;font-family:Steelfish;-inkscape-font-specification:Steelfish;letter-spacing:2.31245804px;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+           id="path871" />
+      </g>
       <flowRoot
          xml:space="preserve"
          id="flowRoot836"
@@ -126,6 +155,6 @@
              height="137.88582"
              x="-58.588848"
              y="260.29535" /></flowRegion><flowPara
-           id="flowPara842"></flowPara></flowRoot>    </g>
+           id="flowPara842" /></flowRoot>    </g>
   </g>
 </svg>

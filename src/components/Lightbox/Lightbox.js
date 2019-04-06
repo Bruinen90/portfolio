@@ -15,7 +15,7 @@ const Lightbox = (props) => {
                 className={styles.container}
                 style={{
                     height: window.innerWidth > 768 ?
-                        '90vh' : `${window.innerHeight}px`,
+                        'auto' : `${window.innerHeight}px`,
                     backgroundColor: props.background,
                 }}
             >

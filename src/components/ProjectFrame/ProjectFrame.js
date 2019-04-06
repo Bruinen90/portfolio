@@ -24,6 +24,10 @@ class ProjectFrame extends React.Component {
     //     hang()
     //     document.addEventListener('scroll', hang);
     // }
+    showDetails = () => {
+        this.setState({zoomed: !this.state.zoomed});
+        document.body.classList.toggle('noScroll');
+    }
     render() {
         const projectImg = require(`../../img/portfolio/${this.props.img}`);
         const projectLogo = require('../../img/portfolio/logos/osiedlova.svg')
@@ -53,7 +57,7 @@ class ProjectFrame extends React.Component {
                                 <img src={visitIcon} alt="" className={styles.icon}/>
                             </a>
                             <div
-                                onClick={()=>this.setState({zoomed: true})}
+                                onClick={()=>this.showDetails()}
                             >
                                 <img src={detailsIcon} alt="" className={styles.icon}/>
                             </div>
@@ -67,7 +71,7 @@ class ProjectFrame extends React.Component {
                 </div>
                         <FullInfo
                             visible = {this.state.zoomed}
-                            clickClose = {()=>this.setState({zoomed: false})}
+                            clickClose = {()=>this.showDetails()}
                             fullImgUrl = {this.props.img}
                             title = {this.props.title}
                             techs = {this.props.techs}

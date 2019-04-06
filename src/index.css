@@ -15,6 +15,7 @@
     --color-dark: #254651;
     --color-pink: #EE7B69;
     --font-headers: 'PeaceSans';
+    --font-standard: 'Josefin Sans';
 }
 
 body {
@@ -26,7 +27,10 @@ body {
   /* background: linear-gradient(var(--color-dark), var(--color-light)) no-repeat; */
   background: linear-gradient(to bottom, var(--color-dark) 10%, #78c6d3 35% 100%);
   background-size: cover;
-  min-height: 100vh;
+}
+
+.noScroll {
+    overflow: hidden;
 }
 
 * {
@@ -37,7 +41,6 @@ body {
 h1, h2, h3, h4, h5 {
     font-family: var(--font-headers);
     font-weight: 300;
-    text-shadow: 2px 2px 0px rgba(0,0,0,.5);
 }
 
 h2 {

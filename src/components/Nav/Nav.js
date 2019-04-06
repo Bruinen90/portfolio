@@ -2,37 +2,9 @@ import React from 'react';
 import styles from './Nav.module.css';
 import Toggler from './Toggler/Toggler';
 import Cover from '../Cover/Cover';
+import NavItems from './NavItems/NavItems';
 
 const Nav = (props) => {
-    const menuItems = [
-        {
-            fullName: 'Home',
-            sectionName: 'home',
-        },
-        {
-            fullName: 'Portfolio',
-            sectionName: 'portfolio',
-        },
-        {
-            fullName: 'O mnie',
-            sectionName: 'about'
-        },
-        {
-            fullName: 'Kontakt',
-            sectionName: 'contact'
-        }
-    ]
-    const menuOutput = menuItems.map(item => {
-        return(
-            <li
-                className={styles.menuItem}
-                onClick={()=>props.clickLink(item.sectionName)}
-                key={item.sectionName}
-            >
-                {item.fullName}
-            </li>
-        )
-    })
     return(
         <div className={styles.wrapper}>
             <Toggler
@@ -41,7 +13,9 @@ const Nav = (props) => {
             />
             <div className={[styles.menu, props.menuVisible && styles.menuVisible].join(' ')}>
                 <ul className={styles.menuItems}>
-                    {menuOutput}
+                    <NavItems
+                        clickLink={(item)=>props.clickLink(item)}
+                    />
                 </ul>
             </div>
             <Cover

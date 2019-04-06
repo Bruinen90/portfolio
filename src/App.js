@@ -6,6 +6,7 @@ import Portfolio from './containers/Portfolio/Portfolio';
 import Contact from './containers/Contact/Contact';
 import MemorySocks from './containers/MemorySocks/MemorySocks';
 import About from './containers/About/About';
+import Footer from './components/Footer/Footer';
 
 class App extends Component {
     constructor(props) {
@@ -55,6 +56,9 @@ class App extends Component {
                 <section ref={this.sectionsRefs.contact}>
                     <Contact />
                 </section>
+                <Footer
+                    clickLink = {(link)=>this.goToSection(link)}
+                />
             </div>
         );
     }
