@@ -1,0 +1,31 @@
+.socialIcon__icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 15px;
+}
+
+.socialIcon__icon path {
+    fill: var(--color-dark);
+}
+
+.socialIcon__icon--light path {
+    fill: var(--color-light);
+}
+
+.socialIcon__icon--small {
+    width: 30px;
+    height: 30px;
+
+}
+
+@media (min-width: 768px) {
+    .socialIcon__icon:hover {
+        animation: swirl .5s forwards;
+    }
+
+    @keyframes swirl {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}

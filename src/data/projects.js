@@ -6,6 +6,7 @@ const projectsList = [
         url: 'https://escalapoland.com/',
         type: 'zlecenie komercyjne',
         techs: ['react', 'react router', 'css modules'],
+        myRole: 'Stworzenie witryny na podstawie otrzymanego projektu graficznego przy współpracy z klientem',
     },
     {
         name: 'domino',
@@ -15,6 +16,7 @@ const projectsList = [
         url: 'https://domino-9aeb5.firebaseapp.com/',
         type: 'zlecenie komercyjne',
         techs: ['react', 'react router', 'css modules'],
+        myRole: 'Stworzenie witryny na podstawie otrzymanego projektu graficznego',
     },
     {
         name: 'osiedlova',
@@ -23,6 +25,7 @@ const projectsList = [
         url: 'http://www.osiedlova.com/',
         type: 'zlecenie komercyjne',
         techs: ['html5', 'css3', 'bem', 'sass', 'js'],
+        myRole: 'Stworzenie witryny na podstawie otrzymanego projektu graficznego',
     },
     {
         name: 'estilo',
@@ -31,6 +34,7 @@ const projectsList = [
         url: 'https://bruinen90.github.io/estilo/',
         type: 'projekt oczekujący na akceptację',
         techs: ['html5', 'css3', 'bem', 'sass', 'js'],
+        myRole: 'Projekt oraz realizacja witryny "od A do Z" przy współpracy z klientem',
     },
     {
         name: 'wolove burgers',
@@ -39,6 +43,7 @@ const projectsList = [
         url: 'http://woloveburgers.pl/',
         type: 'zlecenie komercyjne',
         techs: ['html5', 'css3', 'sass', 'bem', 'js'],
+        myRole: 'Projekt oraz realizacja witryny "od A do Z" przy współpracy z klientem',
     },
     {
         name: 'czyżyk',
@@ -47,6 +52,7 @@ const projectsList = [
         url: 'https://bruinen90.github.io/czyzyk/',
         type: 'projekt oczekujący na akceptację',
         techs: ['html5', 'css3', 'bem', 'js', 'gulp', 'sass'],
+        myRole: 'Projekt oraz realizacja witryny "od A do Z" przy współpracy z klientem',
     },
     {
         name: 'kitchen planner',
@@ -55,6 +61,7 @@ const projectsList = [
         url: 'https://kitchen-planer.firebaseapp.com/',
         type: 'realizacja na cele prezentacyjne',
         techs: ['react', 'redux', 'react router'],
+        myRole: 'Projekt oraz realizacja własnego pomysłu na aplikację w ramach treningu nowej technologii',
     },
     {
         name: 'fylo',
@@ -63,6 +70,7 @@ const projectsList = [
         url: 'https://bruinen90.github.io/fylo/',
         type: 'realizacja na cele prezentacyjne',
         techs: ['html5', 'css3', 'bem', 'sass', 'js'],
+        myRole: 'Stworzenie szablonu witryny na podstawie otrzymanego projektu graficznego'
     },
     {
         name: 'fylo dark',
@@ -71,6 +79,7 @@ const projectsList = [
         url: 'https://bruinen90.github.io/fylo-dark/',
         type: 'realizacja na cele prezentacyjne',
         techs: ['html5', 'css3', 'bem', 'sass', 'js'],
+        myRole: 'Stworzenie szablonu witryny na podstawie otrzymanego projektu graficznego'
     },
 ];
 

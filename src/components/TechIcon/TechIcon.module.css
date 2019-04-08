@@ -1,5 +1,7 @@
 .icon {
-    width: 30px;
+    height: 45px;
+    width: 45px;
+    margin: 0 7.5px;
 }
 
 @media (min-width: 768px) {

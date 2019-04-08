@@ -5,7 +5,7 @@
     height: 100vh;
     width: 75vw;
     z-index: 100;
-    background-color: #aaa;
+    background-color: var(--color-dark);
     padding: 100px 30px;
     transform: translateX(100%);
     transition: .5s ease-out;
@@ -20,14 +20,16 @@
     padding: 0;
     margin: 0;
     font-size: 28px;
-    color: #fff;
     text-transform: uppercase;
     font-weight: lighter;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 
 @media (min-width: 768px) {
     .menu {
-        width: 450px;
+        width: 400px;
+        padding: 20vh 45px;
     }
 }

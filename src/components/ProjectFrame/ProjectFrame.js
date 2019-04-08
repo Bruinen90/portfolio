@@ -75,6 +75,7 @@ class ProjectFrame extends React.Component {
                             fullImgUrl = {this.props.img}
                             title = {this.props.title}
                             techs = {this.props.techs}
+                            myRole = {this.props.myRole}
                         />
             </div>
         );

@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -16,47 +14,6 @@
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="stack_overflow.svg">
-  <defs
-     id="defs2">
-    <clipPath
-       id="clipPath20"
-       clipPathUnits="userSpaceOnUse">
-      <path
-         inkscape:connector-curvature="0"
-         id="path18"
-         d="M 0,1178.69 V 0 h 6000.85 v 1178.69 z" />
-    </clipPath>
-  </defs>
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="-21.904105"
-     inkscape:cy="14.005398"
-     inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     inkscape:window-width="1916"
-     inkscape:window-height="2054"
-     inkscape:window-x="-10"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0" />
-  <metadata
-     id="metadata5">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
@@ -77,12 +34,12 @@
           <path
              inkscape:connector-curvature="0"
              id="path24"
-             style="fill:#254651;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             style="fill-opacity:1;fill-rule:nonzero;stroke:none"
              d="M 840.719,105.18 V 420.691 H 945.883 V 0 H 0 V 420.691 H 105.164 V 105.18 h 735.555" />
           <path
              inkscape:connector-curvature="0"
              id="path26"
-             style="fill:#254651;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             style="fill-opacity:1;fill-rule:nonzero;stroke:none"
              d="M 210.445,210.359 H 736.266 V 315.523 H 210.445 Z m 471.266,968.331 -84.383,-62.76 313.817,-421.914 84.382,62.761 z M 420.879,929.949 824.926,593.445 892.227,674.258 488.18,1010.76 Z M 288.973,696.102 765.637,474.109 810.035,569.441 333.371,791.434 Z M 220.887,449.711 735.469,341.562 757.098,444.48 242.516,552.629 220.887,449.711" />
         </g>
       </g>

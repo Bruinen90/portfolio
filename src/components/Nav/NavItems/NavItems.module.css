@@ -1,4 +1,42 @@
-.menuItem {
-    margin-bottom: 1rem;
+.menuElement {
+    margin-bottom: 1.75rem;
     cursor: pointer;
+    color: var(--color-light);
+}
+
+.menuItem {
+    display: inline-block;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .menuItem::before, .menuItem::after {
+        position: absolute;
+        top: -2px;
+        opacity: 0;
+        transition: transform .2s cubic-bezier(0.16, 0.65, 0.87, 2.05), opacity .15s linear;
+        color: var(--color-pink);
+    }
+
+    .menuItem::before{
+        content: '<';
+        left: -.75em;
+        transform: translateX(14px);
+    }
+
+    .menuItem::after {
+        content: '>';
+        right: -.75em;
+        transform: translateX(-14px);
+    }
+
+
+    .menuItem:hover::before, .menuItem:hover::after  {
+        opacity: 1;
+        transform: none;
+    }
+
+    .menuItem:hover {
+        color: #fff;
+    }
 }

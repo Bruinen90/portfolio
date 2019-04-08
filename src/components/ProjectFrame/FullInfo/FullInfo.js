@@ -31,7 +31,7 @@ const FullInfo = (props) => {
                     <div className={[styles.cell, styles.myPart].join(' ')}>
                         <h3 className={styles.infoHeader}>Moja rola</h3>
                         <p>
-                            Witryna stworzona samodzielnie od podstaw - layout dla wersji komputerowej oraz mobilnej, zebranie i dopasowanie grafiki oraz napisanie responsywnego kodu.
+                            {props.myRole}
                         </p>
                     </div>
                     <div className={[styles.cell, styles.techs].join(' ')}>

@@ -23,11 +23,13 @@ const NavItems = (props) => {
     const menuOutput = menuItems.map(item => {
         return(
             <li
-                className={styles.menuItem}
+                className={styles.menuElement}
                 onClick={()=>props.clickLink(item.sectionName)}
                 key={item.sectionName}
             >
-                {item.fullName}
+                <div className={styles.menuItem}>
+                    {item.fullName}
+                </div>
             </li>
         )
     })

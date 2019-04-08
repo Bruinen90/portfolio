@@ -22,6 +22,8 @@
 @media(min-width: 768px) {
     .grid {
         grid-template: auto / 1fr 1fr 1fr;
+        grid-gap: 1.5vw;
+        padding: 1.5vw;
     }
 
     .headerCont {

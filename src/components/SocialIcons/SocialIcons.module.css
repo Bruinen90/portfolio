@@ -2,20 +2,3 @@
     display: flex;
     max-width: 200px;
 }
-
-.socialIcon {
-    height: 40px;
-    padding: 0 15px;
-}
-
-@media (min-width: 768px) {
-    .socialIcon:hover {
-        animation: jump .25s 2 alternate;
-    }
-
-    @keyframes jump {
-        to {
-            transform: translateY(-15px);
-        }
-    }
-}

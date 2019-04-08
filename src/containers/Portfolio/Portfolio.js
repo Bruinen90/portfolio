@@ -17,6 +17,7 @@ const Portfolio = (props) => {
                 themeColour={project.themeColour}
                 url = {project.url}
                 techs = {project.techs}
+                myRole = {project.myRole}
                 // animated = {animatedPictureIndex === index}
                 key = {index}
             />

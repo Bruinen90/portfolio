@@ -14,6 +14,10 @@
     background-color: var(--color-dark);
 }
 
+.container:active {
+    transform: scale(0.9);
+}
+
 .justFrame {
     background-color: transparent;
     box-shadow: none;
@@ -25,6 +29,12 @@
 
 @media (min-width: 768px) {
     .container:hover {
-        filter: brightness(120%);
+        background-color: var(--color-pink);
+        border-color: var(--color-pink);
+    }
+
+    .justFrame:hover {
+        background-color: transparent;
+        border-color: var(--color-pink);
     }
 }
