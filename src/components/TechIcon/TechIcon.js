@@ -7,7 +7,10 @@ const TechIcon = (props) => {
             src={require(`../../img/techs/${props.name.replace(' ', '_')}.svg`)}
             alt={props.name}
             title={props.fullName}
-            className={styles.icon}
+            className={[
+                styles.icon,
+                props.small && styles.iconSmall,
+            ].join(' ')}
         />
     );
 };

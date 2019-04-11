@@ -23,6 +23,7 @@ class About extends Component {
                     <TechIcon
                         name={skill.name}
                         fullName={skill.fullName}
+                        small={true}
                     />
                 </div>
             )

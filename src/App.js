@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import styles from './App.module.css';
+import { renderToStaticMarkup } from "react-dom/server";
+import { withLocalize } from 'react-localize-redux';
+
 import Nav from './components/Nav/Nav';
 import Home from './containers/Home/Home';
 import Portfolio from './containers/Portfolio/Portfolio';
@@ -11,6 +14,14 @@ import Footer from './components/Footer/Footer';
 class App extends Component {
     constructor(props) {
         super(props);
+
+        this.props.initialize({
+            languages: [
+                { name: 'Polski', code: 'pl'},
+                { name: 'English', code: 'en'},
+            ],
+            options: { renderToStaticMarkup }
+        })
         this.state = {
             showMenu: false,
         };
@@ -63,4 +74,4 @@ class App extends Component {
         );
     }
 }
-export default App;
+export default withLocalize(App);
