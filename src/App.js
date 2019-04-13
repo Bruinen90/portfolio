@@ -47,6 +47,7 @@ class App extends Component {
             <div className={styles.container}>
                 <Nav
                     clickToggler = {()=>this.clickMenuTogglerHandler()}
+                    clickCover = {()=>this.setState({showMenu: false})}
                     menuVisible = {this.state.showMenu}
                     clickLink = {(link)=>this.goToSection(link)}
                 />

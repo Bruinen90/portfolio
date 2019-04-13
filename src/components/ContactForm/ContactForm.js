@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import styles from './ContactForm.module.css';
 import axios from 'axios';
+import { Translate } from "react-localize-redux";
+import { withLocalize } from "react-localize-redux";
 
 import TextInput from './TextInput/TextInput';
+
+import data from './ContactForm.json';
 
 const API_PATH = 'https://woloveburgers.pl/api/bruinen/email_form.php';
 
@@ -38,6 +42,7 @@ class ContactForm extends Component {
                 }
             }
         }
+        this.props.addTranslation(data);
     }
 
     submitHandler = (e) => {
@@ -93,65 +98,52 @@ class ContactForm extends Component {
     }
 
     render() {
-        let sendButtonValue = this.state.sent ? 'Wysłano' : 'Wyślij';
+        let sendButtonValue = this.state.sent ? 'sent' : 'send';
         if(this.state.error) {
-            sendButtonValue = 'Błąd'
+            sendButtonValue = 'error'
         }
 
         const sendButtonClasslist = [styles.button];
         if(this.state.error) { sendButtonClasslist.push(styles.error)}
         if(this.state.sent) { sendButtonClasslist.push(styles.sent)}
 
-        const textInputs = [
-            {
-                type: "text",
-                placeholder: "imię i nazwisko / firma",
-                label: "name",
-            },
-            {
-                type: "email",
-                placeholder: "email",
-                label: "email",
-            },
-            {
-                type: "text",
-                placeholder: "temat",
-                label: "topic",
-            },
-            {
-                type: "textarea",
-                placeholder: "treść",
-                label: "content",
-            },
-        ];
-
-        const inputOutput = textInputs.map((params, index) => {
+        const inputOutput = Object.entries(data.inputs).map(([name, info]) => {
+            // console.log(`inputs.${name}.placeholder`)
             return (
-                <TextInput
-                    key={params.label}
-                    type={params.type}
-                    placeholder={params.placeholder}
-                    inputName={params.label}
-                    index = {index}
-                    handleChange={(e) => this.inputChangeHandler(e, params.label)}
-                    changed={this.state.inputs[params.label].changed}
-                    valid={this.state.inputs[params.label].validity}
-                    value={this.state[params.label]}
-                />
+                <Translate>
+                    {({ translate }) =>
+                    <TextInput
+                        key={name}
+                        type={info.type}
+                        placeholder={translate(`inputs.${name}.placeholder`)}
+                        inputName={info.label}
+                        index = {name}
+                        handleChange={(e) => this.inputChangeHandler(e, name)}
+                        changed={this.state.inputs[name].changed}
+                        valid={this.state.inputs[name].validity}
+                        value={this.state[name]}
+                    />
+                    }
+
+                </Translate>
             )
         })
         return (
             <form className={styles.form}>
                 {inputOutput}
-                <input
-                    type="submit"
-                    className={sendButtonClasslist.join(' ')}
-                    value={sendButtonValue}
-                    onClick={(e) => this.submitHandler(e)}
-                    disabled={!this.state.formValid}
-                />
+                <Translate>
+                    {({ translate }) =>
+                        <input
+                            type="submit"
+                            className={sendButtonClasslist.join(' ')}
+                            value={translate(`sendButtonValues.${sendButtonValue}`)}
+                            onClick={(e) => this.submitHandler(e)}
+                            disabled={!this.state.formValid}
+                        />
+                    }
+                </Translate>
             </form>
         );
     }
 }
-export default ContactForm;
+export default withLocalize(ContactForm);

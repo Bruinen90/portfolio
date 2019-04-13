@@ -1,0 +1,25 @@
+{
+    "sendButtonValues": {
+        "send": ["Wyślij", "Send"],
+        "sent": ["Wysłano", "Recieved"],
+        "error": ["Błąd", "Error"]
+    },
+    "inputs": {
+        "name":{
+            "type": "text",
+            "placeholder": ["imię i nazwisko / firma", "name / company"]
+        },
+        "email":{
+            "type": "email",
+            "placeholder": ["email", "email"]
+        },
+        "topic":{
+            "type": "text",
+            "placeholder": ["temat", "topic"]
+        },
+        "content":{
+            "type": "textarea",
+            "placeholder": ["treść", "message"]
+        }
+    }
+}

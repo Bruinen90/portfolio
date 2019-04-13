@@ -24,6 +24,7 @@ const Nav = (props) => {
             </div>
             <Cover
                 visible = {props.menuVisible}
+                clickCover = {props.clickCover}
             />
         </div>
     );

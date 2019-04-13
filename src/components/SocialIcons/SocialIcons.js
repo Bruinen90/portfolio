@@ -12,19 +12,19 @@ const SocialIcons = (props) => {
             name: 'GitHub',
             linkTarget: 'https://github.com/bruinen90/',
             iconSrc: githubIcon,
-            description: 'Moje konto na GitHub',
+            description: 'GitHub',
         },
         {
             name: 'CodeWars',
             linkTarget: 'https://www.codewars.com/users/Bruinen',
             iconSrc: codewarsIcon,
-            description: 'Moje konto na CodeWars',
+            description: 'CodeWars',
         },
         {
             name: 'Stack Overflow',
             linkTarget: 'https://stackoverflow.com/users/9701988/bruinen',
             iconSrc: stackOverflowIcon,
-            description: 'Moje konto na StackOverflow',
+            description: 'StackOverflow',
         },
     ];
 
