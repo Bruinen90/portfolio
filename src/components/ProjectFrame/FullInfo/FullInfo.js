@@ -5,6 +5,7 @@ import { withLocalize } from "react-localize-redux";
 
 import TechIcon from '../../TechIcon/TechIcon';
 import Lightbox from '../../Lightbox/Lightbox';
+import Button from '../../Button/Button';
 
 import data from './FullInfo.json';
 
@@ -18,7 +19,7 @@ class FullInfo extends React.Component {
             return(
                 <TechIcon name={tech} key={tech}/>
             )
-        })
+        });
         return(
             <Lightbox
                 visible={this.props.visible}
@@ -27,7 +28,7 @@ class FullInfo extends React.Component {
             >
                 <div className={styles.container}>
                     <img
-                        src={require(`../../../img/portfolio/${this.props.fullImgUrl}`)}
+                        src={require(`../../../img/portfolio/${this.props.imgFilename}.png`)}
                         alt={this.props.title}
                         className={styles.fullImg}
                     />
@@ -37,7 +38,7 @@ class FullInfo extends React.Component {
                                 <Translate id='aboutProjectHeader' />
                             </h3>
                             <p>
-                                {this.props.aboutProject}
+                                {this.props.about}
                             </p>
                         </div>
                         <div className={[styles.cell, styles.myPart].join(' ')}>
@@ -56,6 +57,19 @@ class FullInfo extends React.Component {
                                 {techsOutput}
                             </div>
                         </div>
+                        <div className={styles.buttonsCont}>
+                            <Button
+                                click = {()=>window.open(this.props.url, '_blank')}
+                                >
+                                    <Translate id='visitWebpage' />
+                                </Button>
+                                <Button
+                                    justFrame = {true}
+                                    click = {this.props.clickClose}
+                                    >
+                                        <Translate id='goBack' />
+                                    </Button>
+                                </div>
                     </div>
                 </div>
             </Lightbox>

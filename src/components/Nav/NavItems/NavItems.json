@@ -1,6 +1,6 @@
 {
     "home":["Strona główna", "Home"],
-    "portfolio":["Portfolio", "Portfolio"],
     "about":["O mnie", "About me"],
+    "portfolio":["Portfolio", "Portfolio"],
     "contact":["Kontakt", "Contact"]
 }

@@ -20,9 +20,11 @@ class Portfolio extends React.Component {
                 <div key = {name}>
                 <ProjectFrame
                     title = {name}
-                    img = {info.img}
+                    imgFilename = {info.img}
+                    logo = {info.logo}
                     themeColour={info.themeColour}
                     url = {info.url}
+                    about= <Translate id={`projects.${name}.aboutProject`} />
                     techs = {info.techs}
                     myRole = <Translate id={`projects.${name}.myRole`} />
                 />
@@ -45,15 +47,6 @@ class Portfolio extends React.Component {
                     </div>
                     <div className={styles.grid}>
                         {projectsOut}
-                    </div>
-
-                    <div className={styles.headerCont}>
-                        <Header
-                            color="#254651"
-                            inheritFont={true}
-                        >
-                            Realizacje
-                        </Header>
                     </div>
                 </SkewedSection>
             </div>

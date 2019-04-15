@@ -25,7 +25,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background: linear-gradient(var(--color-dark), var(--color-light)) no-repeat; */
-  background: linear-gradient(to bottom, var(--color-dark) 10%, #78c6d3 35% 100%);
+  background: linear-gradient(to bottom, var(--color-dark) 10%, #78c6d3 25% 100%);
   background-size: cover;
 }
 
@@ -49,6 +49,6 @@ h2 {
 
 @media (min-width: 768px) {
     body {
-        background: linear-gradient(to bottom, var(--color-dark) 10%, #78c6d3 28% 100%);
+        background: linear-gradient(to bottom, var(--color-dark) 10%, #78c6d3 23% 100%);
     }
 }

@@ -21,6 +21,16 @@
     padding: 0 45px;
 }
 
+.buttonsCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+    margin-top: 2rem;
+    color: var(--color-light);
+}
+
 @media (min-width: 768px) {
     .container {
         display: flex;
@@ -34,6 +44,9 @@
 
     .infoCont {
         height: 36vw;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
     }
 
     .infoHeader {
@@ -42,5 +55,12 @@
 
     .icons {
         padding: 0 15px;
+    }
+
+    .buttonsCont {
+        align-self: flex-end;
+        width: auto;
+        max-width: 300px;
+        margin: auto 0 30px;
     }
 }

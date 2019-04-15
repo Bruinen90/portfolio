@@ -3,7 +3,6 @@ import styles from './SocialIcons.module.css';
 import githubIcon from '../../img/social/github.svg';
 import codewarsIcon from '../../img/social/codewars.svg';
 import stackOverflowIcon from '../../img/social/stack_overflow.svg';
-import ReactSVG from 'react-svg';
 import SocialIcon from './SocialIcon/SocialIcon';
 
 const SocialIcons = (props) => {

@@ -29,8 +29,8 @@ class ProjectFrame extends React.Component {
         document.body.classList.toggle('noScroll');
     }
     render() {
-        const projectImg = require(`../../img/portfolio/${this.props.img}`);
-        const projectLogo = require('../../img/portfolio/logos/osiedlova.svg')
+        const projectImg = require(`../../img/portfolio/thumbs/${this.props.imgFilename}.jpg`);
+        const projectLogo = require(`../../img/portfolio/logos/${this.props.logo}`)
         return(
             <div className={styles.container}>
                 <div className={styles.picture} ref={this.frameRef}>
@@ -72,10 +72,12 @@ class ProjectFrame extends React.Component {
                         <FullInfo
                             visible = {this.state.zoomed}
                             clickClose = {()=>this.showDetails()}
-                            fullImgUrl = {this.props.img}
                             title = {this.props.title}
+                            imgFilename = {this.props.imgFilename}
+                            about = {this.props.about}
                             techs = {this.props.techs}
                             myRole = {this.props.myRole}
+                            url = {this.props.url}
                         />
             </div>
         );

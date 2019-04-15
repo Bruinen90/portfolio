@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { withLocalize } from "react-localize-redux";
 import styles from './LanguageSelector.module.css';
 
@@ -10,6 +10,7 @@ const LanguageSelector = ({ languages, activeLanguage, setActiveLanguage }) => (
                 onClick={() => setActiveLanguage(lang.code)}
                 key={lang.code}
                 className={styles.icon}
+                alt={lang.code}
             />
         ))}
   </div>

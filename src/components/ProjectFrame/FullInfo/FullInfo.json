@@ -1,5 +1,7 @@
 {
     "aboutProjectHeader": ["O projekcie", "About project"],
     "myRoleHeader": ["Moja rola", "My role"],
-    "techsHeader": ["Użyte technologie", "Technologies"]
+    "techsHeader": ["Technologie", "Technologies"],
+    "goBack": ["Powrót", "Back"],
+    "visitWebpage": ["Odwiedź stronę", "Visit webpage"]
 }

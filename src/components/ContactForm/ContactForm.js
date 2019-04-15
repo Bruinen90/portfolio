@@ -110,10 +110,9 @@ class ContactForm extends Component {
         const inputOutput = Object.entries(data.inputs).map(([name, info]) => {
             // console.log(`inputs.${name}.placeholder`)
             return (
-                <Translate>
+                <Translate key={name}>
                     {({ translate }) =>
                     <TextInput
-                        key={name}
                         type={info.type}
                         placeholder={translate(`inputs.${name}.placeholder`)}
                         inputName={info.label}
