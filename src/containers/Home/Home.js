@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import styles from './Home.module.css';
 import WelcomeLogo from '../../components/WelcomeLogo/WelcomeLogo';
 import Lightbulb from '../../components/Lightbulb/Lightbulb';
+import HideOnScroll from '../../components/HideOnScroll/HideOnScroll';
+import LanguageSelector from '../../components/LanguageSelector/LanguageSelector';
 
 
 class Home extends Component {
@@ -86,6 +88,11 @@ class Home extends Component {
                     lightPower = {this.state.bulbsOff.filter((a) => !a).length}
                 />
                 {lightBulbsOutput}
+                <HideOnScroll>
+                    <div className={styles.langsCont}>
+                        <LanguageSelector />
+                    </div>
+                </HideOnScroll>
             </div>
         );
     }

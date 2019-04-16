@@ -24,6 +24,9 @@ class App extends Component {
         })
         this.state = {
             showMenu: false,
+            touchStartPointX: 0,
+            touchStartPointY: 0,
+            touchMoveX: false,
         };
         this.sectionsRefs = {
             home: React.createRef(),
@@ -31,6 +34,43 @@ class App extends Component {
             portfolio: React.createRef(),
             contact: React.createRef(),
         };
+    }
+
+    componentDidMount() {
+        window.addEventListener('touchstart', this.touchStartHandler);
+        window.addEventListener('touchmove', this.touchMoveHandler);
+        window.addEventListener('touchend', this.touchEndHandler);
+    }
+
+    touchStartHandler = (e) => {
+        this.setState({
+            touchStartPointX: e.touches[0].clientX,
+            touchStartPointY: e.touches[0].clientY}
+        )
+    }
+
+    touchMoveHandler = (e) => {
+        this.setState({
+            touchMoveX: e.touches[0].clientX - this.state.touchStartPointX,
+            touchMoveY: e.touches[0].clientY - this.state.touchStartPointY,
+        });
+    }
+
+    touchEndHandler = (e) => {
+        if(
+            this.state.touchMoveX < -30 &&
+            Math.abs(this.state.touchMoveY) < 45 &&
+            !this.state.showMenu
+        ) {
+            this.clickMenuTogglerHandler();
+        }
+        if(
+            this.state.touchMoveX > 30 &&
+            Math.abs(this.state.touchMoveY) < 45 &&
+            this.state.showMenu) {
+            this.clickMenuTogglerHandler();
+        }
+        this.setState({touchMoveX: 0});
     }
 
     clickMenuTogglerHandler = () => {
