@@ -6,7 +6,8 @@ const Button = (props) => {
         <div
             className={[
                 styles.container,
-                props.justFrame && styles.justFrame
+                props.justFrame && styles.justFrame,
+                props.withIcon && styles.withIcon,
             ].join(' ')}
             onClick={props.click}
         >

@@ -68,7 +68,8 @@
 
 @media (min-width: 768px) {
     .header {
-        font-size: 20vh;
+        font-size: 12.5vw;
+        padding-bottom: 3vw;
     }
 
     .header0 {
@@ -90,9 +91,20 @@
     }
 
     .sub {
-        font-size: 5vh;
-        letter-spacing: 2vh;
-        margin-left: 2rem;
-        padding-top: 20vh;
+        font-size: 3vw;
+        letter-spacing: 1.5vw;
+        margin-left: 1rem;
+        padding-top: 30vh;
+    }
+}
+
+@media (min-width: 1600px) {
+    .header {
+        font-size: 12vw;
+        padding-bottom: 5vw;
+    }
+
+    .sub {
+        font-size: 2.5vw;
     }
 }

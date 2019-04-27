@@ -6,6 +6,7 @@
   z-index: 100;
 }
 
+
 .bulb__inside, .bulb__outside {
   opacity: 0.3;
 }
@@ -79,7 +80,14 @@
 
 @media (min-width: 768px) {
     .bulb__img {
-        margin-top: -45px;
-        width: 15vh;
+        margin-top: -2.5vw;
+        width: 10vw;
+    }
+}
+
+@media (min-width: 1600px) {
+    .bulb__img {
+        margin-top: -5vw;
+        width: 7.5vw;
     }
 }

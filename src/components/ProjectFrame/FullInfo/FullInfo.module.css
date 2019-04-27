@@ -22,13 +22,17 @@
 }
 
 .buttonsCont {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 75%;
+    min-width: 225px;
     margin: auto;
-    margin-top: 2rem;
+    margin-top: 4rem;
     color: var(--color-light);
+}
+
+.buttonIcon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    float: left;
 }
 
 @media (min-width: 768px) {

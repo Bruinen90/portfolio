@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './ProjectFrame.module.css';
 import visitIcon from '../../img/icons/visit.svg';
 import detailsIcon from '../../img/icons/details.svg';
+import ReactSVG from 'react-svg';
 
 import FullInfo from './FullInfo/FullInfo';
 
@@ -14,16 +15,6 @@ class ProjectFrame extends React.Component {
             zoomed: false,
         }
     }
-
-    // componentDidMount() {
-    //     const hang = () => {
-    //         if(this.frameRef.current.getBoundingClientRect().top < window.innerHeight && this.props.animated) {
-    //             this.frameRef.current.classList.add(styles.pictureAnimated)
-    //         }
-    //     }
-    //     hang()
-    //     document.addEventListener('scroll', hang);
-    // }
     showDetails = () => {
         this.setState({zoomed: !this.state.zoomed});
         document.body.classList.toggle('noScroll');
@@ -54,12 +45,18 @@ class ProjectFrame extends React.Component {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <img src={visitIcon} alt="" className={styles.icon}/>
+                                <ReactSVG
+                                    src={visitIcon}
+                                    svgClassName={styles.icon}
+                                />
                             </a>
                             <div
                                 onClick={()=>this.showDetails()}
                             >
-                                <img src={detailsIcon} alt="" className={styles.icon}/>
+                                <ReactSVG
+                                    src={detailsIcon}
+                                    svgClassName={styles.icon}
+                                />
                             </div>
                         </div>
                         <img
@@ -69,16 +66,16 @@ class ProjectFrame extends React.Component {
                         />
                     </div>
                 </div>
-                        <FullInfo
-                            visible = {this.state.zoomed}
-                            clickClose = {()=>this.showDetails()}
-                            title = {this.props.title}
-                            imgFilename = {this.props.imgFilename}
-                            about = {this.props.about}
-                            techs = {this.props.techs}
-                            myRole = {this.props.myRole}
-                            url = {this.props.url}
-                        />
+                <FullInfo
+                    visible = {this.state.zoomed}
+                    clickClose = {()=>this.showDetails()}
+                    title = {this.props.title}
+                    imgFilename = {this.props.imgFilename}
+                    about = {this.props.about}
+                    techs = {this.props.techs}
+                    myRole = {this.props.myRole}
+                    url = {this.props.url}
+                />
             </div>
         );
     }
