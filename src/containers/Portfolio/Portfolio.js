@@ -24,7 +24,7 @@ class Portfolio extends React.Component {
                     logo = {info.logo}
                     themeColour={info.themeColour}
                     url = {info.url}
-                    about= <Translate id={`projects.${name}.aboutProject`} />
+                    about = <Translate id={`projects.${name}.aboutProject`} />
                     techs = {info.techs}
                     myRole = <Translate id={`projects.${name}.myRole`} />
                 />

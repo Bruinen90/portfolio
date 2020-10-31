@@ -6,7 +6,7 @@
                 "img": "escala",
                 "logo": "escala.svg",
                 "themeColour": "#444",
-                "url": "https://escalapoland.com/",
+                "url": "https://escala-cd821.firebaseapp.com/",
                 "aboutProject": [
                     "Strona internetowa dla producenta ekskluzywnych mebli pokrywanych warstwą płynnego metalu, stworzona przy współpracy z projektantem",
                     "Webpage created for Escala company specialized in production of state-of-the-art metal covered furniture. Project was build in cooperation with UX specialist."
@@ -21,7 +21,7 @@
                 "img": "domino",
                 "logo": "domino.png",
                 "themeColour": "#21125e",
-                "url": "https://domino-9aeb5.firebaseapp.com/",
+                "url": "https://dominogrupa.pl/",
                 "aboutProject": [
                     "Strona internetowa dla agencji reklamowej Domino świadczącej szeroki zakres usług, stworzona przy współpracy z projektantem.",
                     "Webpage created for Domino advertising agency in cooperation with UX specialist."
@@ -30,6 +30,81 @@
                 "myRole": [
                     "Stworzenie witryny na podstawie otrzymanego projektu graficznego przy współpracy z klientem",
                     "Coding webpage according to recieved graphic project in cooperation with customer"
+                ]
+            },
+            "Bez-niespodzianek":{
+                "img": "bez_niespodzianek",
+                "logo": "bez_niespodzianek.svg",
+                "themeColour": "#49903e",
+                "url": "https://bez-niespodzianek.web.app/",
+                "aboutProject": [
+                    "Aplikacja webowa do organizacji losowań prezentów na Mikołajki i nie tylko.",
+                    "Webapp for organizing Christmas gifts draws"
+                ],
+                "techs": ["react", "redux", "react router"],
+                "myRole": [
+                    "Projekt oraz realizacja własnego pomysłu na aplikację w ramach treningu nowej technologii. Frontend z użyciem React, backend Node.js + Express oraz baza danych MongoDB",
+                    "Design and coding own idea for a web aplication. Frontend created with React, backend Node.js + Express and MongoDB  "
+                ]
+            },
+            "abm":{
+                "img": "abm",
+                "logo": "abm.svg",
+                "themeColour": "#5e1e92",
+                "url": "https://bruinen90.github.io/abm/",
+                "aboutProject": [
+                    "Strona internetowa spóki akcyjnej ABM - producenta elementów wyposażenia sklepów i punktów usługowych",
+                    "Webpage created for ABM joint-stock company"
+                ],
+                "techs": ["html5", "css3", "bem", "sass", "js"],
+                "myRole": [
+                    "Stworzenie witryny na podstawie otrzymanego projektu graficznego w formacie Adobe XD",
+                    "Coding webpage according to recieved Adobe XD graphic project"
+                ]
+            },
+            "warsztat piękna":{
+                "img": "warsztat_piekna",
+                "logo": "warsztat_piekna.svg",
+                "themeColour": "#e71682",
+                "url": "https://bruinen90.github.io/warsztat_piekna/",
+                "aboutProject": [
+                    "Strona internetowa salonu kosmetycznego",
+                    "Beauty studio webpage"
+                ],
+                "techs": ["html5", "css3", "bem", "sass", "js"],
+                "myRole": [
+                    "Stworzenie witryny na podstawie otrzymanego projektu graficznego w formacie PSD przy współpracy z klientem",
+                    "Coding webpage according to recieved PSD graphic project in cooperation with customer"
+                ]
+            },
+            "interpages":{
+                "img": "interpages",
+                "logo": "interpages.svg",
+                "themeColour": "#1cbbb4",
+                "url": "https://bruinen90.github.io/interpages/",
+                "aboutProject": [
+                    "Strona internetowa firmy z branży web development, z którą ściśle współpracuję",
+                    "Webpage of interpages - web development company I cooperate with"
+                ],
+                "techs": ["html5", "css3", "bem", "sass", "js"],
+                "myRole": [
+                    "Stworzenie szablonu witryny na podstawie otrzymanego projektu graficznego",
+                    "Coding webpage frames according to recieved graphic files"
+                ]
+            },
+            "face recognition app":{
+                "img": "face_recognition",
+                "logo": "face_recognition.svg",
+                "themeColour": "#a6c0fe",
+                "url": "https://facerecognition-bruinen.herokuapp.com/",
+                "aboutProject": [
+                    "Aplikacja webowa wykrywająca twarze na zdjęciach przesłanych przez użytkownika",
+                    "Webbapp counting faces on pictures provided by the user"
+                ],
+                "techs": ["html5", "css3", "js", "react", "node", "postgre"],
+                "myRole": [
+                    "Stworzenie aplikacji we frameworku React, serwera z użyciem node.js i Express oraz bazy danych PostgreSQL",
+                    "Creating webapp in React, server in node.js with Express framework and PostrgeSQL database"
                 ]
             },
             "osiedlova":{
@@ -120,21 +195,6 @@
                 "myRole": [
                     "Projekt oraz realizacja własnego pomysłu na aplikację w ramach treningu nowej technologii",
                     "Design and coding own idea for a web aplication"
-                ]
-            },
-            "fylo dark":{
-                "img": "fylo_dark",
-                "logo": "fylo.svg",
-                "themeColour": "#375266",
-                "url": "https://bruinen90.github.io/fylo-dark/",
-                "aboutProject": [
-                    "Projekt landing-page realizowany w ramach wyzwania frontendmentor.com",
-                    "Landing-page created for frontendmentor.com challenge"
-                ],
-                "techs": ["html5", "css3", "bem", "sass", "js"],
-                "myRole": [
-                    "Stworzenie szablonu witryny na podstawie otrzymanego projektu graficznego",
-                    "Coding webpage frames according to recieved graphic files"
                 ]
             }
         }

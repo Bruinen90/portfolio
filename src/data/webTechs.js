@@ -18,7 +18,11 @@ const webTechs = [
     {
         name: 'rwd',
         fullName: 'Responsive Web Design',
-    }
+    },
+    {
+        name: 'node',
+        fullName: 'Node.js',
+    },
 ];
 
 export default webTechs;

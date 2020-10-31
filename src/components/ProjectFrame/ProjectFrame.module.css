@@ -72,8 +72,14 @@
 }
 
 .icon {
+    width: auto;
     height: 7.5vw;
     padding-left: 20px;
+    color: var(--color-dark);
+}
+
+.icon g {
+    fill: currentColor;
 }
 
 .frame:hover .iconsBackground {
@@ -104,19 +110,13 @@
     }
 
     .icon {
-        width: auto;
         height: 2.25vw;
         padding-left: 2vw;
         cursor: pointer;
-        color: var(--color-dark);
     }
 
     .icon:hover {
         color: var(--color-pink);
-    }
-
-    .icon g {
-        fill: currentColor;
     }
 
     .frame {

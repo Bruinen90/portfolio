@@ -73,11 +73,11 @@ const projectsList = [
         myRole: 'Stworzenie szablonu witryny na podstawie otrzymanego projektu graficznego'
     },
     {
-        name: 'fylo dark',
-        img: 'fylo_dark.png',
-        themeColour: '#375266',
-        url: 'https://bruinen90.github.io/fylo-dark/',
-        type: 'realizacja na cele prezentacyjne',
+        name: 'interpages',
+        img: 'interpages.svg',
+        themeColour: '#1cbbb4',
+        url: 'https://bruinen90.github.io/interpages/',
+        type: 'zlecenie komercyjne',
         techs: ['html5', 'css3', 'bem', 'sass', 'js'],
         myRole: 'Stworzenie szablonu witryny na podstawie otrzymanego projektu graficznego'
     },
